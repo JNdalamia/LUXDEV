@@ -1,0 +1,34 @@
+HOSPITAL & PHARMACY PERFORMANCE ANALYSIS
+Executive Insights Summary
+==================================================================================
+
+OVERVIEW
+
+This analysis examines 300 patient visits across six counties, generating KES 275,407 in pharmacy revenue throughout 2024. The average length of stay was 1.41 days, with an average pharmacy revenue of KES 918 per visit. The data reveals significant insights into disease patterns, revenue drivers, and operational efficiency.
+
+DISEASE ACROSS COUNTIES
+
+Disease prevalence varies significantly by county. Flu is the most common diagnosis overall (56 cases), followed by Typhoid (54 cases) and Diabetes (53 cases). However, county-specific patterns emerge: Kisumu hypertension has 16 cases. Uasin Gishu and Nakuru have 15 and 10 Flu cases respectively. Kiambu has 13 cases. 
+
+VISIT VOLUME VERSUS PHARMACY REVENUE
+
+A critical finding challenges conventional assumptions: more visits do not automatically generate higher revenue. Uasin Gishu generates KES 1,197 per visit compared to Nakuru's KES 750—a 60% difference despite similar visit volumes. This disparity stems from diagnosis mix rather than volume. High-revenue diagnoses include Typhoid (KES 1,141 per visit) and Malaria (KES 1,105), while Diabetes and Flu generate significantly less (KES 704 and KES 735 respectively). 
+
+DEPARTMENTAL PERFORMANCE
+
+The three departments—Inpatient, Emergency, and Outpatient—generate remarkably balanced revenue, each contributing approximately one-third of total pharmacy income. However, Emergency achieves the highest efficiency with KES 930 per visit, suggesting superior medication protocols or case complexity. This model warrants study for potential application across departments. The balanced distribution indicates effective service delivery across all hospital functions without overreliance on any single department.
+
+AGE GROUP MEDICATION PATTERNS
+
+Age-based analysis reveals a striking concentration of pharmacy spending. The 66+ age group accounts for 36.6% of total pharmacy costs despite representing a smaller proportion of visits, averaging significantly higher per-visit costs due to chronic disease management. Conversely, the 36-50 age group shows surprisingly low consumption, potentially indicating underutilization of preventive medications. These findings necessitate geriatric pharmaceutical management programs focusing on medication reviews and polypharmacy prevention, while the middle-aged group may benefit from enhanced preventive care engagement.
+
+OPERATIONAL EFFICIENCY INSIGHTS
+
+The relationship between hospital stay length and pharmacy costs reveals operational optimization opportunities. Diabetes demonstrates exceptional efficiency with the shortest stays (0.79 days) and lowest costs (KES 704), indicating effective outpatient management. Conversely, Flu patients experience relatively long stays (1.55 days) but low pharmacy spending (KES 735), suggesting that extended stays rely on supportive care rather than expensive medications. This pattern raises questions about patient flow efficiency and discharge processes. Hypertension shows the longest stays (1.72 days) with moderate costs, warranting protocol review.
+
+STRATEGIC RECOMMENDATIONS
+
+The hospital should implement county-specific disease prevention programs, optimize revenue through diagnosis mix management rather than volume increases, develop comprehensive geriatric care protocols, and review patient flow processes for diagnoses showing extended stays without proportional pharmacy costs. Drug inventory should align with the six major categories: Malaria medications lead revenue at KES 54,950, followed by Cold & Flu (KES 51,117) and Diabetes treatments (KES 49,141).
+
+Success depends on strategic focus: efficient operations for high-volume diagnoses, premium service for high-revenue cases, and county-tailored public health interventions addressing specific disease prevalence patterns.
+
