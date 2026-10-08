@@ -1,77 +1,469 @@
-Project: Sales Data Cleaning & Preparation Log
-Analyst: Jason Ndalamia
-Date: January 30, 2026
-Source: Raw Sales Data
-"dashboard.png"
-1. Executive Summary
-This dataset has been processed to correct data quality issues including missing values, date logic errors, and pricing outliers. A staging table approach was used to preserve the integrity of the original raw data.
+\# Excel Data Cleaning \& Sales Analysis
 
-2. Data Cleaning Rules & Logic Applied
-A. Staging & Architecture
-Action: Created a Staging Table sheet.
 
-Rule: All cleaning and manipulation were performed on the staging copy; the original raw data remains untouched for backup purposes.
 
-B. Duplicate Management
-Criteria Used: "Exact Match" (Row is a duplicate only if ALL columns match).
+!\[Dashboard Preview](./dashboard.png)
 
-Findings: No exact row duplicates were found.
 
-Anomaly Note: Duplicate Order ID found (ORD-2023-521818).
 
-Resolution: Upon inspection, line details (SKU, Qty, etc.) differed for this ID.
+A Microsoft Excel data analytics project focused on data cleaning, validation, transformation, and business insight generation from raw sales data.
 
-Assumption: The duplicate ID represents a data entry error on the ID field, but the transactions themselves are valid and unique. No rows were removed.
 
-C. Missing Data Handling
-To ensure complete analysis without dropping rows, missing categorical data was imputed using the following standard placeholders:
 
-City: Nulls replaced with "Unknown".
+The project demonstrates how a structured data-cleaning workflow can improve data quality before analysis and reporting.
 
-Channel: Nulls replaced with "Unspecified".
 
-Salesperson: Nulls replaced with "Unassigned".
 
-D. Data Type Standardization
-Text: Columns 1, 4-11 (IDs, Region, Country, etc.) formatted as Text to prevent Excel from auto-formatting IDs.
+\## Project Overview
 
-Currency: Unit Price (Col 12) and Revenue (Col 13) formatted as Currency.
 
-Percentage: Discount (Col 14) formatted as Percentage.
 
-Numeric: Quantity (Col 5) formatted as Number.
+The project begins with raw sales data and applies a controlled cleaning process using a staging-table approach.
 
-E. Outlier & Error Correction
-Unit Price: Negative or suspicious prices were flagged. A new column CorrectedUnitPrice contains the fixed values (corrected via absolute value/manual verification).
 
-Discount Cap:
 
-Issue: Discounts > 30% were identified as erroneous or unapproved.
+The workflow focuses on:
 
-Rule: Capped at 30%.
 
-Formula: =IF(Discount > 0.3, 0.3, Discount) stored in CorrectedDiscount.
 
-F. Date Logic & Lead Time
-Invalid Dates: Identified rows where RequiredDate < OrderDate (Impossible logic).
+\- Preserving the original raw data
 
-Correction Rule: Assumed a standard 7-day turnaround for these errors.
+\- Identifying data-quality issues
 
-Formula: =IF(Required < Order, Order + 7, Required).
+\- Standardising data types
 
-New Metric: Added LeadTimeDays to track fulfillment speed.
+\- Handling missing values
 
-Formula: =DATEDIF(OrderDate, CorrectedRequiredDate, "D").
+\- Investigating duplicate records
 
-3. Key Insights Summary
-Performance:
+\- Correcting invalid or suspicious values
 
-Best Year: 2024
+\- Validating date logic
 
-Worst Year: 2025
+\- Creating derived analytical measures
 
-Product: SKU CMP-8851 is the highest revenue generator.
+\- Extracting business insights from the cleaned dataset
 
-Channel: Direct sales outperformed Retail sales across all regions.
 
-Seasonality: Peak revenue period identified between April and August.
+
+\## Business Objectives
+
+
+
+The analysis was designed to:
+
+
+
+\- Improve the quality and consistency of the sales dataset
+
+\- Identify and document data-quality problems
+
+\- Apply transparent correction rules
+
+\- Prepare reliable data for analysis
+
+\- Identify sales performance patterns
+
+\- Generate business insights from the cleaned data
+
+
+
+\## Data Quality Workflow
+
+
+
+\### 1. Staging \& Data Protection
+
+
+
+A separate staging table was created so that cleaning and transformation activities could be performed without altering the original raw dataset.
+
+
+
+This approach preserves the raw data as a reference and provides a safer basis for analysis.
+
+
+
+\### 2. Duplicate Assessment
+
+
+
+Duplicate detection was based on an exact-match approach, where a row was considered a duplicate only when all columns matched.
+
+
+
+The analysis also identified a repeated Order ID:
+
+
+
+```text
+
+ORD-2023-521818
+
+```
+
+
+
+The repeated ID was investigated further because the associated line details differed.
+
+
+
+The project documentation concluded that the transactions appeared to be distinct and therefore no rows were removed.
+
+
+
+\### 3. Missing-Value Handling
+
+
+
+Missing categorical values were replaced with consistent analytical placeholders:
+
+
+
+| Field | Replacement |
+
+|---|---|
+
+| City | `Unknown` |
+
+| Channel | `Unspecified` |
+
+| Salesperson | `Unassigned` |
+
+
+
+This approach allows the records to remain available for analysis instead of being removed because of missing categorical information.
+
+
+
+\### 4. Data-Type Standardisation
+
+
+
+The dataset was standardised to improve consistency and prevent unintended Excel formatting.
+
+
+
+Examples included:
+
+
+
+\- IDs and relevant text fields stored as Text
+
+\- Unit Price and Revenue formatted as Currency
+
+\- Discount formatted as Percentage
+
+\- Quantity formatted as Number
+
+
+
+\### 5. Price Validation
+
+
+
+Suspicious or negative unit prices were identified.
+
+
+
+A derived field named `CorrectedUnitPrice` was introduced to store corrected values based on review of the affected records.
+
+
+
+\### 6. Discount Validation
+
+
+
+Discount values above 30% were identified as potentially erroneous or outside the approved rule.
+
+
+
+A corrected discount field was created using the rule:
+
+
+
+```excel
+
+=IF(Discount>0.3,0.3,Discount)
+
+```
+
+
+
+This capped discounts at 30%.
+
+
+
+\### 7. Date Logic Validation
+
+
+
+Records were checked for impossible date relationships where:
+
+
+
+```text
+
+Required Date < Order Date
+
+```
+
+
+
+For these records, a standard seven-day turnaround was assumed.
+
+
+
+A corrected required date was calculated using:
+
+
+
+```excel
+
+=IF(Required<Order,Order+7,Required)
+
+```
+
+
+
+\### 8. Derived Fulfilment Metric
+
+
+
+A `LeadTimeDays` metric was created to measure the number of days between the order date and corrected required date.
+
+
+
+```excel
+
+=DATEDIF(OrderDate,CorrectedRequiredDate,"D")
+
+```
+
+
+
+This provides an additional operational metric for analysing fulfilment performance.
+
+
+
+\## Business Insights
+
+
+
+The analysis produced several documented findings.
+
+
+
+\### Sales Performance
+
+
+
+\- \*\*2024\*\* was identified as the best-performing year.
+
+\- \*\*2025\*\* was identified as the weakest year in the analysed data.
+
+
+
+\### Product Performance
+
+
+
+\- Product/SKU `CMP-8851` was identified as the highest revenue generator.
+
+
+
+\### Sales Channel
+
+
+
+\- Direct sales outperformed Retail sales across all regions in the analysis.
+
+
+
+\### Seasonality
+
+
+
+\- The analysis identified \*\*April to August\*\* as the peak revenue period.
+
+
+
+\## Analytical Workflow
+
+
+
+```text
+
+Raw Sales Data
+
+&#x20;      │
+
+&#x20;      ▼
+
+Staging Copy
+
+&#x20;      │
+
+&#x20;      ▼
+
+Data Quality Assessment
+
+&#x20;      │
+
+&#x20;      ├── Duplicate Checks
+
+&#x20;      ├── Missing Values
+
+&#x20;      ├── Data Types
+
+&#x20;      ├── Price Validation
+
+&#x20;      ├── Discount Validation
+
+&#x20;      └── Date Validation
+
+&#x20;      │
+
+&#x20;      ▼
+
+Corrected \& Enriched Dataset
+
+&#x20;      │
+
+&#x20;      ▼
+
+Business Analysis
+
+&#x20;      │
+
+&#x20;      ▼
+
+Dashboard \& Insights
+
+```
+
+
+
+\## Dashboard
+
+
+
+The project includes an Excel dashboard visualising the analysed sales data.
+
+
+
+The dashboard provides a visual layer for communicating the results of the cleaned and enriched dataset.
+
+
+
+\## Project Structure
+
+
+
+```text
+
+excel-data-analysis-dashboard/
+
+│
+
+├── dashboard.png
+
+├── excel\_data\_analysis\_dashboard.xlsx
+
+└── README.md
+
+```
+
+
+
+\## How to Use
+
+
+
+1\. Open `excel\_data\_analysis\_dashboard.xlsx` in Microsoft Excel.
+
+2\. Review the raw and staging data.
+
+3\. Examine the applied data-cleaning and validation logic.
+
+4\. Review the derived fields and analytical results.
+
+5\. Use the dashboard to explore the reported sales patterns and findings.
+
+
+
+\## Tools \& Technologies
+
+
+
+\- Microsoft Excel
+
+\- Data Cleaning
+
+\- Data Validation
+
+\- Data Transformation
+
+\- Data Analysis
+
+\- Dashboard Development
+
+\- Business Reporting
+
+\- Git \& GitHub
+
+
+
+\## Skills Demonstrated
+
+
+
+\- Data quality assessment
+
+\- Data cleaning
+
+\- Missing-value handling
+
+\- Duplicate investigation
+
+\- Data validation
+
+\- Error correction
+
+\- Derived metric creation
+
+\- Business analysis
+
+\- Excel-based reporting
+
+\- Data visualization
+
+\- Analytical problem solving
+
+
+
+\## Project Context
+
+
+
+\*\*Training Project — LuxDev Data Analytics Program\*\*
+
+
+
+This project was completed as part of practical data analytics training focused on developing strong data-cleaning, analysis, and reporting skills using Microsoft Excel.
+
+
+
+\## Author
+
+
+
+\*\*Jason Ndalamia\*\*
+
+
+
+Data Analytics | Business Intelligence | AI \& Technology
+
+
+
+\[GitHub](https://github.com/JNdalamia)
