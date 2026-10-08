@@ -1,8 +1,8 @@
-\# Excel Data Cleaning \& Sales Analysis
+# Excel Data Cleaning & Sales Analysis
 
 
 
-!\[Dashboard Preview](./dashboard.png)
+![Dashboard Preview](./dashboard.png)
 
 
 
@@ -14,7 +14,7 @@ The project demonstrates how a structured data-cleaning workflow can improve dat
 
 
 
-\## Project Overview
+## Project Overview
 
 
 
@@ -26,27 +26,27 @@ The workflow focuses on:
 
 
 
-\- Preserving the original raw data
+- Preserving the original raw data
 
-\- Identifying data-quality issues
+- Identifying data-quality issues
 
-\- Standardising data types
+- Standardising data types
 
-\- Handling missing values
+- Handling missing values
 
-\- Investigating duplicate records
+- Investigating duplicate records
 
-\- Correcting invalid or suspicious values
+- Correcting invalid or suspicious values
 
-\- Validating date logic
+- Validating date logic
 
-\- Creating derived analytical measures
+- Creating derived analytical measures
 
-\- Extracting business insights from the cleaned dataset
+- Extracting business insights from the cleaned dataset
 
 
 
-\## Business Objectives
+## Business Objectives
 
 
 
@@ -54,25 +54,25 @@ The analysis was designed to:
 
 
 
-\- Improve the quality and consistency of the sales dataset
+- Improve the quality and consistency of the sales dataset
 
-\- Identify and document data-quality problems
+- Identify and document data-quality problems
 
-\- Apply transparent correction rules
+- Apply transparent correction rules
 
-\- Prepare reliable data for analysis
+- Prepare reliable data for analysis
 
-\- Identify sales performance patterns
+- Identify sales performance patterns
 
-\- Generate business insights from the cleaned data
-
-
-
-\## Data Quality Workflow
+- Generate business insights from the cleaned data
 
 
 
-\### 1. Staging \& Data Protection
+## Data Quality Workflow
+
+
+
+### 1. Staging & Data Protection
 
 
 
@@ -84,7 +84,7 @@ This approach preserves the raw data as a reference and provides a safer basis f
 
 
 
-\### 2. Duplicate Assessment
+### 2. Duplicate Assessment
 
 
 
@@ -112,7 +112,7 @@ The project documentation concluded that the transactions appeared to be distinc
 
 
 
-\### 3. Missing-Value Handling
+### 3. Missing-Value Handling
 
 
 
@@ -136,7 +136,7 @@ This approach allows the records to remain available for analysis instead of bei
 
 
 
-\### 4. Data-Type Standardisation
+### 4. Data-Type Standardisation
 
 
 
@@ -148,17 +148,17 @@ Examples included:
 
 
 
-\- IDs and relevant text fields stored as Text
+- IDs and relevant text fields stored as Text
 
-\- Unit Price and Revenue formatted as Currency
+- Unit Price and Revenue formatted as Currency
 
-\- Discount formatted as Percentage
+- Discount formatted as Percentage
 
-\- Quantity formatted as Number
+- Quantity formatted as Number
 
 
 
-\### 5. Price Validation
+### 5. Price Validation
 
 
 
@@ -170,7 +170,7 @@ A derived field named `CorrectedUnitPrice` was introduced to store corrected val
 
 
 
-\### 6. Discount Validation
+### 6. Discount Validation
 
 
 
@@ -194,7 +194,7 @@ This capped discounts at 30%.
 
 
 
-\### 7. Date Logic Validation
+### 7. Date Logic Validation
 
 
 
@@ -226,7 +226,7 @@ A corrected required date was calculated using:
 
 
 
-\### 8. Derived Fulfilment Metric
+### 8. Derived Fulfilment Metric
 
 
 
@@ -246,7 +246,7 @@ This provides an additional operational metric for analysing fulfilment performa
 
 
 
-\## Business Insights
+## Business Insights
 
 
 
@@ -254,41 +254,41 @@ The analysis produced several documented findings.
 
 
 
-\### Sales Performance
+### Sales Performance
 
 
 
-\- \*\*2024\*\* was identified as the best-performing year.
+- **2024** was identified as the best-performing year.
 
-\- \*\*2025\*\* was identified as the weakest year in the analysed data.
-
-
-
-\### Product Performance
+- **2025** was identified as the weakest year in the analysed data.
 
 
 
-\- Product/SKU `CMP-8851` was identified as the highest revenue generator.
+### Product Performance
 
 
 
-\### Sales Channel
+- Product/SKU `CMP-8851` was identified as the highest revenue generator.
 
 
 
-\- Direct sales outperformed Retail sales across all regions in the analysis.
+### Sales Channel
 
 
 
-\### Seasonality
+- Direct sales outperformed Retail sales across all regions in the analysis.
 
 
 
-\- The analysis identified \*\*April to August\*\* as the peak revenue period.
+### Seasonality
 
 
 
-\## Analytical Workflow
+- The analysis identified **April to August** as the peak revenue period.
+
+
+
+## Analytical Workflow
 
 
 
@@ -326,7 +326,7 @@ Data Quality Assessment
 
 &#x20;      ▼
 
-Corrected \& Enriched Dataset
+Corrected & Enriched Dataset
 
 &#x20;      │
 
@@ -338,13 +338,13 @@ Business Analysis
 
 &#x20;      ▼
 
-Dashboard \& Insights
+Dashboard & Insights
 
 ```
 
 
 
-\## Dashboard
+## Dashboard
 
 
 
@@ -356,7 +356,7 @@ The dashboard provides a visual layer for communicating the results of the clean
 
 
 
-\## Project Structure
+## Project Structure
 
 
 
@@ -368,7 +368,7 @@ excel-data-analysis-dashboard/
 
 ├── dashboard.png
 
-├── excel\_data\_analysis\_dashboard.xlsx
+├── excel_data_analysis_dashboard.xlsx
 
 └── README.md
 
@@ -376,77 +376,77 @@ excel-data-analysis-dashboard/
 
 
 
-\## How to Use
+## How to Use
 
 
 
-1\. Open `excel\_data\_analysis\_dashboard.xlsx` in Microsoft Excel.
+1. Open `excel_data_analysis_dashboard.xlsx` in Microsoft Excel.
 
-2\. Review the raw and staging data.
+2. Review the raw and staging data.
 
-3\. Examine the applied data-cleaning and validation logic.
+3. Examine the applied data-cleaning and validation logic.
 
-4\. Review the derived fields and analytical results.
+4. Review the derived fields and analytical results.
 
-5\. Use the dashboard to explore the reported sales patterns and findings.
-
-
-
-\## Tools \& Technologies
+5. Use the dashboard to explore the reported sales patterns and findings.
 
 
 
-\- Microsoft Excel
-
-\- Data Cleaning
-
-\- Data Validation
-
-\- Data Transformation
-
-\- Data Analysis
-
-\- Dashboard Development
-
-\- Business Reporting
-
-\- Git \& GitHub
+## Tools & Technologies
 
 
 
-\## Skills Demonstrated
+- Microsoft Excel
+
+- Data Cleaning
+
+- Data Validation
+
+- Data Transformation
+
+- Data Analysis
+
+- Dashboard Development
+
+- Business Reporting
+
+- Git & GitHub
 
 
 
-\- Data quality assessment
-
-\- Data cleaning
-
-\- Missing-value handling
-
-\- Duplicate investigation
-
-\- Data validation
-
-\- Error correction
-
-\- Derived metric creation
-
-\- Business analysis
-
-\- Excel-based reporting
-
-\- Data visualization
-
-\- Analytical problem solving
+## Skills Demonstrated
 
 
 
-\## Project Context
+- Data quality assessment
+
+- Data cleaning
+
+- Missing-value handling
+
+- Duplicate investigation
+
+- Data validation
+
+- Error correction
+
+- Derived metric creation
+
+- Business analysis
+
+- Excel-based reporting
+
+- Data visualization
+
+- Analytical problem solving
 
 
 
-\*\*Training Project — LuxDev Data Analytics Program\*\*
+## Project Context
+
+
+
+**Training Project — LuxDev Data Analytics Program**
 
 
 
@@ -454,16 +454,16 @@ This project was completed as part of practical data analytics training focused 
 
 
 
-\## Author
+## Author
 
 
 
-\*\*Jason Ndalamia\*\*
+**Jason Ndalamia**
 
 
 
-Data Analytics | Business Intelligence | AI \& Technology
+Data Analytics | Business Intelligence | AI & Technology
 
 
 
-\[GitHub](https://github.com/JNdalamia)
+[GitHub](https://github.com/JNdalamia)
