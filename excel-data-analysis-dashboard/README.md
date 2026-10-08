@@ -290,54 +290,29 @@ The analysis produced several documented findings.
 
 ## Analytical Workflow
 
-
-
 ```text
-
 Raw Sales Data
-
-&#x20;      │
-
-&#x20;      ▼
-
+       |
+       v
 Staging Copy
-
-&#x20;      │
-
-&#x20;      ▼
-
+       |
+       v
 Data Quality Assessment
-
-&#x20;      │
-
-&#x20;      ├── Duplicate Checks
-
-&#x20;      ├── Missing Values
-
-&#x20;      ├── Data Types
-
-&#x20;      ├── Price Validation
-
-&#x20;      ├── Discount Validation
-
-&#x20;      └── Date Validation
-
-&#x20;      │
-
-&#x20;      ▼
-
+       |
+       +-- Duplicate Checks
+       +-- Missing Values
+       +-- Data Types
+       +-- Price Validation
+       +-- Discount Validation
+       +-- Date Validation
+       |
+       v
 Corrected & Enriched Dataset
-
-&#x20;      │
-
-&#x20;      ▼
-
+       |
+       v
 Business Analysis
-
-&#x20;      │
-
-&#x20;      ▼
-
+       |
+       v
 Dashboard & Insights
 
 ```
